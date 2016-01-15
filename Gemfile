@@ -45,3 +45,6 @@ group :development, :test do
   gem 'foundation-rails'
 end
 
+gem 'ckeditor', '~> 4.0.6'
+gem 'paperclip'
+

@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
-  resources :landing
+  mount Ckeditor::Engine => '/ckeditor'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'landing#index'
+  # root 'landing#index'
+  # root 'posts#index'
+  # get '/post' => 'posts#index'
 
-  get '/post' => 'posts#index'
+  root to: 'posts#index'
+  resources :posts
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
